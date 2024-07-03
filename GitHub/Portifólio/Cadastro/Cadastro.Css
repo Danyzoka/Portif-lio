@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    font-weight: 500;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  
+  main {
+    border: 5px solid #E8CBC0;
+    border-radius: 100px;
+    padding: 10px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  main h1 {
+    color: #8880FE;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  main .social-media {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  main .social-media a {
+    text-decoration: none;
+  }
+  
+  main .social-media img {
+    width: 36px;
+    margin-left: 3rem;
+  }
+  
+  main .social-media a:first-child img {
+    margin-left: 0;
+  }
+  
+  main .alternative {
+    margin-top: 1rem;
+  }
+  
+  main .alternative span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative;
+  }
+  
+  main .alternative span::before,
+  main .alternative span::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  main .alternative span::after {
+    left: 50px;
+  }
+  
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form label {
+    display: flex;
+    flex-direction: column;
+}
+
+main form label span {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+main form input {
+    background:#d5d3f4;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    color: rgba(166, 166, 166);
+    font-size: 1rem;
+    border: 1px solid #040B18;
+    border-radius: 8px;
+}
+
+main form input[type="submit"] {
+    cursor: pointer;
+    width: 50%;
+    margin-top: 4rem;
+    border: none;
+    border-radius: 32px;
+    background: #6C63FF;
+    color: white;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+main form input[type="submit"]:hover {
+    background: #5952d4;
+}
+
+ .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #E8CBC0, #636FA4);
+    clip-path:ellipse (100% at right 100%);
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    main {
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    main form input {
+      width: 100%;
+    }
+    
+    main form input[type="submit"] {
+      width: 100%;
+    }
+    
+    main .social-media {
+      flex-direction: column;
+    }
+    
+    main .social-media img {
+      margin-left: 0;
+      margin-top: 1rem;
+      
+    }
+    
+    main .alternative span::before, main .alternative span::after {
+      width: 50px;
+      right: calc(50% - 25px);
+    }
+    
+    main .alternative span::after {
+      left: calc(50% - 25px);
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    main {
+    width: 85vw;
+    border-width: 5px;
+    border-radius: 50px;
+    padding: 5%;
+    }
+    
+    main h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    }
+    
+    main .social-media img {
+    width: 22px;
+    flex-direction: column;
+    }
+    
+    main .alternative span {
+    font-size: 1rem;
+    }
+    
+    main .alternative span::before, main .alternative span::after {
+    width: 50px;
+    right: 35px;
+    }
+    
+    main .alternative span::after {
+    left: 15px;
+    }
+    
+    main form label span {
+    font-size: 1rem;
+    margin-top: 1rem;
+    }
+    
+    main form input {
+    width: 90%;
+    height: 40px;
+    font-size: 0.9rem;
+    }
+    
+    main form input[type="submit"] {
+    width: 70%;
+    margin-top: 2rem;
+    font-size: 1rem;
+    }
+    }
+  

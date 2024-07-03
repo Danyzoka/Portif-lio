@@ -1,0 +1,305 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+  
+ /* Zerando Css*/
+ 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+ }
+
+/* Fundo-Tela*/
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background:linear-gradient(rgba(17, 17,17, 0.8), rgba(20, 20, 20, 1)), url(/Projetos/Portifólio/Academia/Academia.jpg) ;
+    background-position: center center;
+    background-size: cover;
+    background-position:  y 0px; ;
+    background-repeat: no-repeat;
+    
+}
+
+/*Menu- Header- NavBar*/
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(22, 22, 22, 0.2);
+}
+
+
+.menu-content{
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.logo1 {
+    font-size: 1.8rem;   
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+    margin-left: -100px;
+}
+
+.menu-content .list-itens {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+
+}
+
+.menu-content .list-itens a {
+text-decoration: none;
+color:white;
+padding: 1.5rem;
+transform:2ms ease-in;
+position: relative;
+}
+
+.menu-content .list-itens a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: rgb(207, 207, 196);
+    transition: all 1.5s ease;
+}
+
+    .menu-content .list-itens a:hover:before {
+       width: 100%;
+
+    }
+
+    /* Centro - Conteudo Principal*/
+
+    main {
+        height: 93vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Textos Principais*/
+
+    .primary-text {
+        width: 850px;
+        font-size:5rem ;
+        margin-bottom: 2rem;
+        text-align: center;
+        
+    }
+
+    .second-text{
+margin-bottom: 7rem;
+font-size: 2rem;
+color: rgb(165, 165, 165);
+text-transform: uppercase;
+
+    }
+
+    /* Botoes */
+
+    .btns{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+.btns button{
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1.5s;
+}
+
+.btns button:hover{
+    color: rgb(170, 255, 0);
+    border: none;
+
+}
+
+.btns button:before{
+    content: ' ';
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+position: absolute;
+width: 0%;
+height: 60px;
+background-color: rgb(61, 61, 61);
+z-index: -1;
+transition: 1s;
+
+}
+
+.btns button:hover:before{
+width: 100%;
+
+}
+/* Estilos para o rodapé */
+
+footer {
+  background-color: #333;
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+  
+  .container h3 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  }
+  
+  .container p {
+  font-size: 18px;
+  }
+  
+  .logo {
+  flex-basis: 40%;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 20px;
+  }
+  
+  .info {
+    border-style:solid;
+    margin-left: 320px;
+    flex-basis: 30%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+  
+  .info h3 {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    padding-left: 20px;
+  }
+  
+  .info p {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 100px;
+  }
+    
+  .copywriting {
+    border-style:solid;
+    flex-basis: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 20px;
+  flex-basis: 20%;
+  margin-bottom: 20px;
+  margin-left: -200px;
+  }
+  
+  .copywriting h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  }
+  
+  .copywriting p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  }
+
+  .copywriting button {
+    font-size: 10px;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+
+  .copywriting button:hover{
+    color: rgb(170, 255, 0);
+   
+
+}
+.copywriting button:before{
+  content: ' ';
+  border-radius: 20px;
+  bottom: 0;
+  left: 0;
+position: absolute;
+width: 0%;
+height: 60px;
+background-color: rgb(61, 61, 61);
+z-index: -1;
+transition: 1s;
+
+}
+
+.copywriting button:hover:before{
+  width: 100%;
+  }
+
+  .copywriting input {
+    border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 0px;
+  }
+
+  .direitos {
+    flex-basis: 100%;
+    text-align: left;
+    font-size: 16px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(20, 13, 13);
+    background-color:rgb(20, 13, 13);
+    }

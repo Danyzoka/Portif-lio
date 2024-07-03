@@ -1,0 +1,211 @@
+/* FallGuys.css */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0 auto;
+    font-size: 62.5%;
+    font-family: 'Luckiest Guy', sans-serif;
+}
+
+body {
+    background: linear-gradient(30deg, rgb(255, 255, 60) 25%, transparent 25%),
+                linear-gradient(45deg, rgb(255, 255, 60) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgb(255, 255, 60) 75%),
+                linear-gradient(-45deg, transparent 75%, rgb(255, 255, 60) 75%);
+    background-size: 50px 100px;
+    background-repeat: repeat;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(98, 93, 255);
+}
+
+.menu-content {
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+header .logo1 {
+    max-width: 150px;
+}
+
+.menu-content .list-itens {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.2rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    transition: 1.5s;
+}
+
+.menu-content .list-itens a:hover {
+    color: rgb(255, 255, 129);
+}
+
+.boxImg {
+    text-align: center;
+}
+
+.boxImg .logo2 {
+    margin: 20px auto;
+    transition: transform 0.5s ease;
+}
+
+.boxImg .logo2:hover {
+    transform: rotate(3deg);
+}
+
+.boxImg .guy,
+.boxImg .guy2,
+.boxImg .guy3 {
+    max-width: 300px;
+    transition: transform 1.5s ease;
+}
+
+.boxImg .guy:hover,
+.boxImg .guy2:hover,
+.boxImg .guy3:hover {
+    transform: rotate(7deg);
+}
+
+.bottom {
+    margin: 20px auto;
+    font-size: 3.3rem;
+}
+
+.bottom a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 25px;
+    background: rgb(98, 93, 255);
+    color: #fff;
+    border-radius: 30px;
+    transition: transform 0.5s ease;
+}
+
+.bottom a:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .icons a {
+    text-decoration: none;
+    font-size: 50px;
+    color: #fff;
+    margin: 0 20px;
+    transition: color 0.5s;
+}
+
+footer .icons a:hover {
+    color: rgb(98, 93, 255);
+}
+
+footer .politica {
+    list-style: none;
+    padding: 20px 0;
+}
+
+footer .politica a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    transition: color 0.5s;
+}
+
+footer .politica a:hover {
+    color: rgb(98, 93, 255);
+}
+
+footer .direitos {
+    font-size: 1.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .menu-content {
+        flex-direction: column;
+    }
+
+    .menu-content .list-itens {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxImg .guy,
+    .boxImg .guy2,
+    .boxImg .guy3 {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-content {
+        font-size: 1.4rem;
+    }
+
+    .boxImg .logo2 {
+        width: 80%;
+    }
+
+    .bottom {
+        font-size: 2.5rem;
+    }
+
+    .bottom a {
+        padding: 10px 20px;
+    }
+
+    footer .icons a {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-content {
+        font-size: 1.2rem;
+    }
+
+    .boxImg .guy,
+    .boxImg .guy2,
+    .boxImg .guy3 {
+        max-width: 150px;
+    }
+
+    .bottom {
+        font-size: 2rem;
+    }
+
+    .bottom a {
+        padding: 8px 15px;
+    }
+
+    footer .icons a {
+        font-size: 30px;
+    }
+}

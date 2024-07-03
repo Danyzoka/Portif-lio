@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console</title>
+    <link rel="stylesheet" href="console.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="/Projetos/Portifólio/Console/logo.png" class="logo">
+            <nav>
+                <ul id="menulist">
+                    <li><a href=""> Controles</a></li>
+                    <li><a href=""> Acessórios VR</a></li>
+                    <li><a href=""> Mídias Remotas</a></li>
+                    <li><a href=""> Outros</a></li>
+                </ul>
+            </nav>
+            <img src="/Projetos/Portifólio/Console/menu.png" class="menu-icon" onclick="togglemenu()">
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <h2>PS4 V2<br> Dualshock 4</h2>
+                <h3> Controle Wireless para Playstation 4</h3>
+                <p>(Compativel-Genérico)</p>
+                <h4>$400</h4>
+                <button type="button">Comprar Agora<img src="/Projetos/Portifólio/Console/arrow.png">
+                </button>
+            </div>
+            <div class="col-2">
+                <img src="/Projetos/Portifólio/Console/controller.png" class="controle1">
+                <div class="color-box"></div>
+                <div class="add-btn">
+                    <img src="/Projetos/Portifólio/Console/add.png">
+                    <p> <small> Adicionar ao carrinho</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="links-sociais">
+            <img src="/Projetos/Portifólio/Console/fb.png">
+            <img src="/Projetos/Portifólio/Console/ig.png">
+            <img src="/Projetos/Portifólio/Console/tw.png">
+        </div>
+    </div>
+    <script>
+        var menulist = document.getElementById("menulist");
+        manulist.style.maxHeight="0px";
+        function togglemenu (){
+            if(menulist.style.maxHeight =="0px")
+            {
+                menulist.style.maxHeight= "130px";
+            }
+            else{
+                menulist.style.maxHeight= "0px";
+            }
+        }
+    </script>
+</body>
+</html>

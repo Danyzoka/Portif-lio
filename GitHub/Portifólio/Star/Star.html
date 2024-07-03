@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Landing Page</title>
+    <link rel="stylesheet" href="Star.Css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="/Projetos/Portifólio/Star/logo.png"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">What's New</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="icons-container">
+              <a href="#"><span class="material-symbols-outlined">shopping_cart</span></a>
+              <a href="#"><span class="material-symbols-outlined">person</span></a>
+              <a href="#"><span class="material-symbols-outlined">location_on</span></a>
+            </div>              
+          </header>
+          <div class="content">
+            <div class="textBox">
+              <h2> It's not just Coffee <br>It's <span>StarBucks</span></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae explicabo officiis ex aspernatur! Voluptas totam placeat vero. Dolorum rerum illo ipsam nihil officiis minima a. Quisquam consequatur quos beatae exercitationem!</p>
+              <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+              <img src="/Projetos/Portifólio/Star/img1.png" class="StarBucks">
+            </div>
+          </div>
+          <ul class="thumb">
+             <li><img src="/Projetos/Portifólio/Star/thumb1.png" onclick="slider('/Projetos/Portifólio/Star/img1.png'); changeCircleColor('#017143')"> </li>
+             <li><img src="/Projetos/Portifólio/Star/thumb2.png" onclick="slider('/Projetos/Portifólio/Star/img2.png'); changeCircleColor('#eb7495')"> </li>
+             <li><img src="/Projetos/Portifólio/Star/thumb3.png" onclick="slider('/Projetos/Portifólio/Star/img3.png'); changeCircleColor('#d752b1')"> </li>
+          </ul>
+          <ul class="sci">
+             <li><a href=""><img src="/Projetos/Portifólio/Star/facebook.png" ></a></li>
+             <li><a href=""><img src="/Projetos//Portifólio/Star/twitter.png" ></a></li>
+             <li><a href=""><img src="/Projetos/Portifólio/Star/instagram.png" ></a></li>
+          </ul>
+       </section>
+       <script>
+          function slider(anything){
+             document.querySelector('.StarBucks').src = anything
+          }
+          function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+          }
+          function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+          }
+       </script>
+   </body>
+</html>

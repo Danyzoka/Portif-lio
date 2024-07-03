@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(181, 233, 165, 0.499);
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid rgb(230, 227, 227);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+header .logo{
+    position: relative;
+    max-width: 80px;  
+    padding-left: 15px;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+list-style: none;
+}
+header ul li a{
+    display: inline-block;
+    color: #017143;
+    font-weight: 600;
+    margin-left: 110px;
+    text-decoration: none;
+}
+.navigation li a {
+  padding: 10px 20px;
+}
+
+.navigation li a:hover {
+    background: #017143;
+    color: #fff;
+    border-radius: 40px;
+  }
+  
+header .material-symbols-outlined {
+    font-size: 30px;
+    color: #017143;
+    padding: 10px;
+    margin: 10px;
+}
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.content .textBox {
+position: relative;
+max-width: 600px;
+}
+.content .textBox h2{
+color: #333;
+font-size: 4em;
+line-height: 1.4em;
+font-weight: 500;
+}
+.content .textBox h2 span{
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+.content .textBox p{
+    color: #333;
+}
+.content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background:#017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+
+}
+.content .textBox a:hover{
+    transform: translatey(-10px);
+}
+
+.content .imgBox {
+    position: relative; 
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
+.content .imgBox img {
+    max-width: 340px;
+}
+.StarBucks {
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+.thumb {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-left: 1px solid #ccc;
+    padding: 10px ;
+}
+.thumb li:hover {
+    transform: translateY(-15px);
+}
+
+.thumb li img {
+    max-width: 80px;
+}
+.sci{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter:invert(1);
+}
+.circle
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right 800px)
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 20px;
+    }
+    header .logo{
+        max-width: 60px;
+        
+    }
+    header ul{
+        
+        display: none;
+    }
+    header .material-symbols-outlined {
+        padding: 0px;
+        margin: 4px;
+    }
+    .toggle{
+        padding-left: 150px;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(/Html/Imagens/Starbucks/menu.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        z-index: 11;
+    }
+    .toggle.active{
+        position: fixed;
+        background: url(/Html/Imagens/Starbucks/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    header ul.navigation.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content:center ;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        z-index: 10;
+    }
+    header ul li a{
+        font-size: 1.5em;
+        margin: 5px;
+        margin-right: 80px;
+        text-decoration: none;
+        margin-top: 40px;
+    }
+    section{
+        padding: 20px 20x 120px;
+    }
+   
+    .content{
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .content .textBox h2{
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    .content .textBox{
+        max-width: 100%;
+    }
+    .content.imgBox{
+         max-width: 100%;
+         justify-content: center;
+    }
+    .content .imgbox img{
+        max-width: 300px;
+        
+    }
+    .thumb li img{
+        max-width: 40px;
+    }
+    .circle{
+        clip-path: circle(400px at center bottom);
+    }
+    .sci{ 
+        background-color:#017143 ;
+        right: 0;
+        width: 60px;
+        border-radius: 10px;
+}
+}

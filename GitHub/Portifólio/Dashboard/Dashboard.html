@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+ <link rel="stylesheet" href="Dashboard.css">
+<head>
+	<meta charset="UTF-8">
+	<title>Social Media Dashboard</title>
+</head>
+<body>
+    <div class="navbar">
+      <ul>
+        <li>
+          <ul class="list-itens">
+            <li><a href="#">Social Media Dashboard</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+	</div>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="#"><i class="fa fa-info-circle"></i> Sobre</a></li>
+      <li><a href="#"><i class="fa fa-envelope"></i> Contato</a></li>
+      <li><a href="#"><i class="fas fa-bell"></i>Notifications</a></li>
+      <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+    </ul>
+  </div>
+  <div class="social-media">
+	<div class="card1">
+	  <i class="fab fa-instagram"></i>
+	  <h2>Instagram</h2>
+	  <p>3.4M</p>
+	  <p>Followers</p>
+	</div>
+	<div class="card2">
+	  <i class="fab fa-facebook"></i>
+	  <h2>Facebook</h2>
+	  <p>482K</p>
+	  <p>Followers</p>
+	</div>
+	<div class="card3">
+	  <i class="fab fa-linkedin"></i>
+	  <h2>LinkedIn</h2>
+	  <p>200K</p>
+	  <p>Followers</p>
+	</div>
+	<div class="card4">
+	  <i class="fab fa-tiktok"></i>
+	  <h2>TikTok</h2>
+	  <p>5.6m</p>
+	  <p>Followers</p>
+	</div>
+  </div>
+  
+	<div class="container">
+		<div class="card">
+			<h2>Likes</h2>
+			<canvas id="likes-chart" class="chart"></canvas>
+		</div>
+		<div class="card">
+			<h2>Views</h2>
+			<canvas id="views-chart" class="chart"></canvas>
+		</div>
+		<div class="card">
+			<h2>Shares</h2>
+			<canvas id="shares-chart" class="chart"></canvas>
+		</div>
+		<div class="card">
+			<h2>Subscribers</h2>
+			<canvas id="subs-chart" class="chart"></canvas>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script>
+		const likesChart = new Chart(document.getElementById('likes-chart'), {
+			type: 'bar',
+			data: {
+				labels: ['Facebook', 'Instagram', 'LinkedIn', 'TikTok'],
+				datasets: [
+					{
+						label: 'Likes',
+						data: [1000, 2000, 3000, 4000],
+						backgroundColor: [
+							'rgba(54, 162, 235, 0.8)',
+							'rgba(255, 99, 132, 0.8)',
+							'rgba(255, 206, 86, 0.8)',
+							'rgba(75, 192, 192, 0.8)'
+						]
+					}
+				]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Likes'
+				}
+			}
+		});
+
+		const viewsChart = new Chart(document.getElementById('views-chart'), {
+			type: 'line',
+			data: {
+				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				datasets: [
+					{
+						label: 'Facebook',
+						data: [50, 100, 150, 200, 250, 300, 350],
+borderColor: 'rgba(54, 162, 235, 1)',
+fill: false
+},
+{
+label: 'Instagram',
+data: [25, 50, 75, 100, 125, 150, 175],
+borderColor: 'rgba(255, 99, 132, 1)',
+fill: false
+},
+{
+label: 'LinkedIn',
+data: [10, 20, 30, 40, 50, 60, 70],
+borderColor: 'rgba(255, 206, 86, 1)',
+fill: false
+},
+{
+label: 'TikTok',
+data: [5, 10, 15, 20, 25, 30, 35],
+borderColor: 'rgba(75, 192, 192, 1)',
+fill: false
+}
+]
+},
+options: {
+title: {
+display: true,
+text: 'Views'
+}
+}
+});
+const sharesChart = new Chart(document.getElementById('shares-chart'), {
+		type: 'doughnut',
+		data: {
+			labels: ['Facebook', 'Instagram', 'LinkedIn', 'TikTok'],
+			datasets: [
+				{
+					label: 'Shares',
+					data: [25, 25, 25, 25],
+					backgroundColor: [
+						'rgba(54, 162, 235, 0.8)',
+						'rgba(255, 99, 132, 0.8)',
+						'rgba(255, 206, 86, 0.8)',
+						'rgba(75, 192, 192, 0.8)'
+					]
+				}
+			]
+		},
+		options: {
+			title: {
+				display: true,
+				text: 'Shares'
+			}
+		}
+	});
+
+	const subsChart = new Chart(document.getElementById('subs-chart'), {
+		type: 'bar',
+		data: {
+			labels: ['Facebook', 'Instagram', 'LinkedIn', 'TikTok'],
+			datasets: [
+				{
+					label: 'Subscribers',
+					data: [500, 1000, 1500, 2000],
+					backgroundColor: [
+						'rgba(54, 162, 235, 0.8)',
+						'rgba(255, 99, 132, 0.8)',
+						'rgba(255, 206, 86, 0.8)',
+						'rgba(75, 192, 192, 0.8)'
+					]
+				}
+			]
+		},
+		options: {
+			title: {
+				display: true,
+				text: 'Subscribers'
+			}
+		}
+	});
+	
+</script>
+</body>
+</html>
